@@ -9,7 +9,7 @@ load_dotenv()  # Load environment variables from .env file
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
-CORS(app, resources={r"/chat": {"origins": "http://localhost:3001"}})  # Allow frontend to call API
+CORS(app, resources={r"/chat": {"origins": "http://localhost:3000"}})  # Allow frontend to call API
 
 @app.route('/chat', methods=['POST'])
 def chat():
